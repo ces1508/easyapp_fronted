@@ -1,0 +1,143 @@
+
+.center-content {
+  margin: 0 auto;
+}
+.image-product {
+  width: 200px;
+  margin-top: 10;
+}
+a:hover, a:active, a:visited {
+  text-decoration: none !important;
+}
+
+.flex{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+
+.product {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-actions {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  margin-left: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  justify-content: space-between;
+}
+.product-description {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.text-description {
+  background-color: transparent !important;
+  border: none !important;
+  font-size: 1em;
+
+}
+.product-description a {
+  position: absolute;
+  z-index: 100;
+  text-decoration: none;
+}
+
+.text-success {
+  color: #3c763d !important;
+}
+.text-info {
+  color: #31708f !important;
+}
+.text-danger {
+  color: #a94442 !important;
+}
+.remove-float {
+  float: none !important;
+}
+.app {
+  margin-top: 1em;
+  width: 24%;
+}
+.app-logo {
+  width: 150px;
+  min-height: 150px;
+}
+.preload-icon {
+  width: 250px;
+}
+
+nav .option {
+  display: flex;
+  width: 100%;
+  padding: 1em;
+  flex-direction: 'row';
+  text-align: center;
+
+}
+nav .option  .icon {
+ font-size: 2em;
+ margin-right: 10;
+}
+nav .option  a {
+  margin-left: 10px;
+  font-size: 1em;
+ }
+.info-sales {
+  display: flex;
+  flex-direction: column;
+}
+.direction-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.circle {
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  margin-top: .5em;
+  border: 8px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+.border-yellow {
+  border-color: yellow;
+}
+.border-green {
+  border-color:green;
+}
+.border-red {
+  border-color:red;
+}
+.overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
+  background-color: rgba(0, 0, 0, .4)
+}
+.modal-easy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: red;
+  flex-direction: column;
+}
