@@ -4,7 +4,7 @@ const ImageProduct = (props) => {
   return(
     <img
       src = {`${source}${props.product.image}`}
-      className = 'img-thumbnail image-product card-img-top'
+      className = 'img-thumbnail image-product card-img-top img-circle'
       alt = {props.product.name}
     />
   )

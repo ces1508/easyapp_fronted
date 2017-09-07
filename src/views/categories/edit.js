@@ -48,7 +48,7 @@ export default class EditCategory extends Component{
             <div className = 'form-group'>
               <input
                 type = 'submit'
-                value = 'Crear Categoria'
+                value = 'Editar Categoria'
                 className = 'btn btn-large btn-success  center-block'
               />
             </div>

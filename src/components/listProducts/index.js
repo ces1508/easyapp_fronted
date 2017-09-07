@@ -6,7 +6,7 @@ const ListProducts = (props) => {
     <div className = 'row'>
       {
         props.products.map((product) => (
-          <Product product = {product} key = {product.id} />
+          <Product product = {product} key = {product.id}  path = {props.path} handleDelete = {props.handleDelete}/>
         ))
       }
     </div>

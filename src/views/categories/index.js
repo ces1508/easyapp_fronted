@@ -63,7 +63,7 @@ export default class AllCategories extends Component {
         <BtnDefault styles = 'btn-success' handleClick = {() => this.destroyCategory(type.payload.id)}>
           Eliminar categoria
         </BtnDefault>
-        <BtnDefault styles = 'btn-danger'>
+        <BtnDefault styles = 'btn-danger' handleClick = {this.hideModal}>
           cerrar
         </BtnDefault>
     </div>
@@ -119,7 +119,7 @@ export default class AllCategories extends Component {
                       () =>
                         this.showModal({type: 'delete', payload: {id: category.id}})
                     }
-                      > Borrar Categoria</p>
+                      > Eliminar Categoria</p>
                   </li>
                 </ul>
               </div>

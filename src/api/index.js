@@ -105,6 +105,50 @@ class Api {
     let request = await axios(endpoint, options)
     console.log(request)
   }
+  async createProduct (appId, categoryId, data) {
+    let endpoint = `${baseUrl}/apps/${appId}/categories/${categoryId}/products`
+    let formData = new FormData()
+    for (let name in data) {
+      formData.append(name, data[name])
+    }
+
+    let options = {
+      method: 'POST',
+      data: formData,
+      headers: {
+        'contentType': 'multipart/form-data'
+      }
+    }
+    let request = await axios(endpoint, options)
+    return { status: request.status === 201? 'created': 'error' }
+  }
+  async getProduct (appId, categoryId, productId) {
+    let endpoint = `${baseUrl}/apps/${appId}/categories/${categoryId}/products/${productId}`
+    let request = await axios(endpoint)
+    return request.data
+  }
+
+  async updateProduct (appId, categoryId, productId, data) {
+    let formData = new FormData()
+    for (let name in data) {
+      formData.append(name, data[name])
+    }
+    let options = {
+      method: 'PATCH',
+      data: formData,
+      headers: {
+        'contentType': 'multipart/form-data'
+      }
+    }
+    let endpoint = `${baseUrl}/apps/${appId}/categories/${categoryId}/products/${productId}`
+    let request = await axios(endpoint, options)
+    return { status: request.status === 204? 'updated': 'failed' }
+  }
+  async deleteProduct (appId, categoryId, productId) {
+    let endpoint = `${baseUrl}/apps/${appId}/categories/${categoryId}/products/${productId}`
+    let request = await axios.delete(endpoint)
+    return { status: request.status === 204? 'success': 'failed' }
+  }
 }
 
 let api = new Api()

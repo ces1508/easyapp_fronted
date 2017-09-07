@@ -1,10 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { BtnDefault } from '../btn'
 const Actions = (props) => {
+  console.log(props)
   return(
     <div className = 'row product-actions'>
-        <Link to = './edit' className = 'btn btn-info'> Editar</Link>
-        <Link to = './edit' className = 'btn btn-danger'>Eliminar </Link>
+        <Link to = { props.edit } className = 'btn btn-info'> Editar</Link>
+        <BtnDefault styles = 'btn-danger' handleClick = {props.handleDelete}> Eliminar </BtnDefault>
     </div>
   )
 }

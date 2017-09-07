@@ -10,15 +10,8 @@ export const BtnDefault = (props) => {
 
 export const LinkAsButton = (props) => {
   return(
-    <Link to = {props.to} className = {`btn btn-${props.type}`}>
+    <Link to = {props.to} className = {`btn ${props.styles}`}>
       {props.children}
     </Link>
   )
 }
-
-// export const LinkAsIcon = (props) => {
-//   return(
-//     <Link >
-//     </Link>
-//   )
-// }
