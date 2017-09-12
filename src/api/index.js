@@ -54,6 +54,7 @@ class Api {
         }
       }
       let request = await axios(endpoint, options)
+      console.log(request.data)
     } catch(e) {
       console.log(e.message)
     }
@@ -103,7 +104,7 @@ class Api {
       }
     }
     let request = await axios(endpoint, options)
-    console.log(request)
+    return { status: request.status === 204? 'updated': 'error' }
   }
   async createProduct (appId, categoryId, data) {
     let endpoint = `${baseUrl}/apps/${appId}/categories/${categoryId}/products`
@@ -148,6 +149,25 @@ class Api {
     let endpoint = `${baseUrl}/apps/${appId}/categories/${categoryId}/products/${productId}`
     let request = await axios.delete(endpoint)
     return { status: request.status === 204? 'success': 'failed' }
+  }
+  async getOrders (appId) {
+    let endpoint = 'https://jsonplaceholder.typicode.com/posts'
+    let request = await axios.get(endpoint)
+    return request.data
+  }
+  async getIconsByType () {
+    let endpoint = `http://localhost:4000/settings/icons`
+    let request = await axios.get(endpoint)
+    return request.data
+  }
+  async settingApp (appId, data) {
+    let options = {
+      method: 'PATCH',
+      data: data,
+    }
+    let endpoint = `${baseUrl}/apps/${appId}/settings`
+    let request = await axios(endpoint, options)
+    return { status: request.status === 204? 'updated': 'failed' }
   }
 }
 

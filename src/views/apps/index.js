@@ -11,7 +11,6 @@ class App extends Component {
   }
   async componentDidMount() {
     let apps = await Api.getApps()
-    console.log(apps)
     this.setState({ apps })
   }
 

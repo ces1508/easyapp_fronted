@@ -97,7 +97,6 @@ export default class AllCategories extends Component {
                 </button>
                 <ul className = 'dropdown-menu' aria-labelledby="dropdownMenuButton">
                   <li>
-                    <a />
                     <Link to={`${this.props.match.url}/${category.id}/products`} className = 'dropdown-item text-success text-center'> Administrar Productos</Link>
                   </li>
                   <li>
@@ -138,13 +137,10 @@ export default class AllCategories extends Component {
       switch (type.type) {
         case 'create':
           return <CreateCategory appId = {this.props.match.params.appId} afterCreated = {() => this.afterCreatedCategory()} />
-          break;
         case 'edit':
           return <EditCategory category = { type.payload } afterCreated = {() => this.afterCreatedCategory()} />
-          break;
         case 'delete': {
           return this.deleteCategory()
-            break;
         }
         default:
           return null

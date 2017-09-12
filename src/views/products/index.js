@@ -21,7 +21,6 @@ export default class Products extends Component {
   }
 
   async deleteProduct(producId) {
-    console.log('click in handle delete')
     let {appId, categoryId} = this.props.match.params
     let deletedProduct = await Api.deleteProduct(appId, categoryId, producId)
     if (deletedProduct.status === 'success') {

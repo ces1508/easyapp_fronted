@@ -22,7 +22,11 @@ export default class EditCategory extends Component{
       name
     }
     let updatedCategory = await Api.updateCategory(appId, id, data)
-    this.props.afterCreated()
+    if (updatedCategory.status === 'updated') {
+      return this.props.afterCreated()
+    } else {
+      return alert('ocurrio un error')
+    }
   }
 
   assignCategory() {

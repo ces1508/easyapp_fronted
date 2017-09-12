@@ -8,7 +8,7 @@ const SideMenu = (props) => {
     <nav>
       <div className = 'option'>
         <span className = 'material-icons icon'> &#xE01D; </span>
-        <a href= {`http://localhost:4000/apps/${props.match.params.id}/`}> gestionar </a>
+        <Link to= {`/apps/${props.match.params.id}/settings`}>  gestionar </Link>
       </div>
       <div className = 'option'>
         <span className = 'material-icons icon'> settings</span>
@@ -16,7 +16,7 @@ const SideMenu = (props) => {
       </div>
       <div className = 'option'>
         <span className = 'material-icons icon'> &#xE14F; </span>
-        <a href= {`http://localhost:4000/apps/${props.match.params.id}/`}> ordenes </a>
+        <Link to= {`/apps/${props.match.params.id}/orders`}> ordenes </Link>
       </div>
     </nav>
   )

@@ -1,0 +1,24 @@
+.containerIcon {
+  padding: 10px;
+  width: 20%;
+  text-align: center;
+}
+.icon {
+}
+.icon::before {
+  font-size: 70px;
+  margin: 0px 0px !important;
+}
+.iconAuthor {
+  border: 1px solid gray;
+  font-size: 1em;
+  text-align: center;
+}
+.active {
+  border: 3px solid green;
+  border-radius: 11px;
+}
+.section-ttile {
+  text-align: center;
+  border-bottom: 2px dashed;
+}
