@@ -1,22 +1,21 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import {
   BrowserRouter as Router,
-  Route,
+  Route
 } from 'react-router-dom'
 
 import AppRouter from './views/apps/router'
 
 class App extends Component {
-
-  render() {
+  render () {
     return (
-    <Router>
-      <div>
-        <Route path = '/apps' component = { AppRouter } />
-      </div>
-    </Router>
+      <Router>
+        <div>
+          <Route path='/apps' component={AppRouter} />
+        </div>
+      </Router>
     )
   }
 }
 
-export default App;
+export default App
